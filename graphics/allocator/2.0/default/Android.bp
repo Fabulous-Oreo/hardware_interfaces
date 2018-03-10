@@ -44,6 +44,8 @@ cc_library_static {
     srcs: ["gralloc1-adapter.cpp", "Gralloc1On0Adapter.cpp"],
     include_dirs: ["system/core/libsync/include"],
     cflags: ["-Wall", "-Wextra"],
+    shared_libs: ["liblog"],
     export_include_dirs: ["."],
     whole_static_libs: ["libgrallocusage"],
+    header_libs: ["libhardware_headers"],
 }
